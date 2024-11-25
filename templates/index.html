@@ -1,0 +1,27 @@
+<!-- index.html -->
+{% extends "base.html" %}
+
+{% block title %}Prospect Research{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Research can take a minute or two, Please be patient...</h1>
+        {% if error %}
+            <p>{{ error }}</p>
+        {% endif %}
+        <form method="post" id="my-form" action="{{ url_for('index') }}">
+            <input type="text" name="url" placeholder="Enter Company URL" required>
+            <button type="submit" id="generate-button">Generate Article</button>
+            <p><span id="loading-spinner" style="display:none;" class="loader"></span></p>
+        </form>
+    </div>
+    <script>
+        document.getElementById('my-form').addEventListener('submit', function(event) {
+            // Prevent the form from submitting immediately
+
+            // Hide the button and show the spinner
+            document.getElementById('generate-button').style.display = 'none';
+            document.getElementById('loading-spinner').style.display = 'inline-block';
+        });
+    </script>
+{% endblock %}
