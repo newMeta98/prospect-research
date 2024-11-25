@@ -25,16 +25,24 @@ A web application designed to help sales teams gather and summarize information 
 ```bash
 git clone https://github.com/newMeta98/prospect-research.git
 cd prospect-research
-Install dependencies:
+```
 
+### Install dependencies:
+```bash
 pip install -r requirements.txt
-Set DeepSeek API KEY:
+```
+### Set DeepSeek API KEY:
+```bash
 In scraping/scraper.py and processing/summarizer.py
 OR set environment variables
-Run the application:
-
+```
+### Run the application:
+```bash
 python app.py
-Usage
+```
+
+### Usage
+
 Access the application:
 Open a web browser and navigate to http://localhost:5000.
 Login: Use the credentials username: admin and password: password to log in.
